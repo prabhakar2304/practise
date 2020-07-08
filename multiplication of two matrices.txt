@@ -1,0 +1,67 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int i,j,k,c[3][3],a[3][3],b[3][3];
+    cout<<"enter the element in first matrix";
+    for(int i=0;i<3;i++)
+    {
+        for(int j=0;j<3;j++)
+        {
+            cin>>a[i][j];
+        }
+    }
+    cout<<"enter the element in second matrix";
+    for(int i=0;i<3;i++)
+    {
+        for( int j=0;j<3;j++)
+        {
+            cin>>b[i][j];
+        }
+    }
+    cout<<"first matrix\n";
+    for(int i=0;i<3;i++)
+        {
+            for(int j=0;j<3;j++)
+            {
+                cout<<a[i][j]<<" ";
+            }cout<<"\n";
+        }
+    cout<<"second matrix\n";
+    for(int i=0;i<3;i++)
+    {
+        for(int j=0;j<3;j++)
+        {
+            cout<<b[i][j]<<" ";
+        }cout<<"\n";
+    }
+    for(int i=0;i<3;i++)
+    {
+        for(int j=0;j<3;j++)
+        {
+            c[i][j]=0;
+            for(int k=0;k<3;k++)
+            {
+                c[i][j]=c[i][j]+a[i][k]*b[k][j];
+            }
+        }
+    }
+    cout<<"product of matrices\n";
+    for(int i=0;i<3;i++)
+    {
+        for(int j=0;j<3;j++)
+        {
+            cout<<c[i][j]<<" ";
+            
+        }cout<<"\n";
+    }
+    return 0;
+}
